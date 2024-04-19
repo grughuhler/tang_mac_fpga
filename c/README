@@ -1,0 +1,12 @@
+This program using the pigpio library so
+
+   sudo apt install libpigpio-dev
+
+Then, just "make" to build it.
+
+Root it as root, e.g. sudo ./mac_command.
+
+Type "help" to see a list of commands.
+
+Tested on Raspbian 10.
+
