@@ -1,12 +1,26 @@
-This program using the pigpio library so
+These programs use the pigpio library so
 
    sudo apt install libpigpio-dev
 
-Then, just "make" to build it.
+Then, just "make" to build on the Raspberry Pi.  Take a look at the
+Makefile.  It builds two versions of the program: mac_command1 uses a
+single birectional signal while mac_command uses two unidirectional
+signals.  The two use slightly different pins, so pay attention to
+that.
 
-Root it as root, e.g. sudo ./mac_command.
+Run as root, e.g. sudo ./mac_command.
 
 Type "help" to see a list of commands.
 
-Tested on Raspbian 10.
+Tested on Raspbian 10.  Program mac_command is the original that uses
+separate signal wires for send and receive.  Program mac_command1 is
+updated to use a single bidirectional signal.
+
+Be careful that the Raspberry Pi and the FPGA are not confgured as
+outputs at the same time.  That could damage hardware.
+
+For mac_command1, I tested with the iop signal connected between the
+Raspberry Pi and the Tang Nano 9K via a 1k resistor.  This works and
+may provide protection when both are outputs due to error.  But,
+still, avoid this.
 

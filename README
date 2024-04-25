@@ -1,4 +1,14 @@
 This directory contains C and verilog source files for the "mac_fpga"
 project for the Tang Nano 9K FPGA.
 
-There is a video about this on YouTube.
+There are videos about this on YouTube:
+
+https://youtu.be/qTdrYL4ayPM?si=Si6v49RGTCkXSw_N
+https://youtu.be/pj_xLoxf1hY?si=CtEBWpYmB8bNOTGb
+
+There are two versions, one that uses two unidirectional signals
+between the Raspberry Pi and the FPGA and one that uses a single
+bidirectional signal.  Be careful not to get them mixed up.
+
+The verilog for the sipo and pipo shift registers is the same for
+both.
